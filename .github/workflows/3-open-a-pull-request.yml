@@ -36,7 +36,7 @@ jobs:
     steps:
       # We'll need to check out the repository so that we can edit the README
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@0717577d45739eb3c851188b29f50ed6c0b2194e # v2
         with:
           fetch-depth: 0 # Let's get all the branches
           ref: my-first-branch # Important, as normally `pull_request` event won't grab other branches
@@ -44,7 +44,7 @@ jobs:
       # Update README to close <details id=3> and open <details id=4>
       # and set STEP to '4'
       - name: Update to step 4
-        uses: skills/action-update-step@v1
+        uses: skills/action-update-step@d9bba80f3a1e04cfcac832726d703c0dd0adb08a # v1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           from_step: 3
